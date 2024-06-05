@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400");
+body {
+	position: fixed;
+	background: royalblue;
+	height: 100%;
+	width: 100%;
+	font-family: "Nunito";
+	margin: 0;
+}
+
+.screen {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+
+	& .phone {
+		height: 90%;
+		width: 320px;
+		background: white;
+		border-radius: 1rem;
+
+		overflow-y: scroll;
+		margin: 0 auto;
+		& .header {
+			padding: 1rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 0.5rem;
+
+			& .search {
+				width: 100%;
+				padding: 0.5rem;
+				border-radius: 5px;
+				border: none;
+				background: #e0e0e0;
+				font-family: "Nunito";
+				font-weight: bold;
+				&::placeholder {
+					font-weight: bolder;
+				}
+			}
+
+			& .menu {
+				height: 30px;
+				width: 30px;
+				padding: 0.5rem;
+				border-radius: 5px;
+				border: none;
+				background: #e0e0e0;
+
+				& i {
+					color: grey;
+				}
+
+				&:hover {
+					background: royalblue;
+					& i {
+						color: white;
+					}
+				}
+			}
+		}
+
+		& .body {
+			overflow-y: scroll;
+			.swiper {
+				height: 300px;
+				padding: 1rem;
+
+				& .swiper-slide {
+					padding: 1rem 0 2rem 0;
+					display: flex;
+					flex-direction: column;
+					background: white;
+					border-radius: 5px;
+
+					width: 100%;
+					height: 250px;
+					border: 1px solid #f9f9f9;
+
+					&:hover {
+						box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+					}
+					& img {
+						height: 80%;
+						width: 100%;
+						object-fit: "cover";
+					}
+
+					& h1 {
+						font-size: 14px;
+						padding: 0 0.5rem;
+						margin: 0;
+						margin-bottom: 5px;
+					}
+
+					& p {
+						font-size: 12px;
+						padding: 0 0.5rem;
+						margin: 0;
+						color: grey;
+					}
+				}
+			}
+
+			.heading-content {
+				padding: 0 1rem;
+				& h4 {
+					font-size: 16px;
+					margin-bottom: 0;
+				}
+			}
+			.top-products {
+				display: grid;
+				grid-template-columns: auto auto;
+				gap: 0.2rem;
+				padding: 1rem;
+
+				& .top-product {
+					padding: 0 1rem;
+					height: 200px;
+					border: 1px solid #f9f9f9;
+					cursor: pointer;
+					& img {
+						height: 130px;
+						width: 100%;
+						object-fit: contain;
+					}
+
+					&-content {
+						display: flex;
+						justify-content: space-between;
+						flex-direction: column;
+
+						& h4 {
+							font-size: 12px;
+							margin-bottom: 0;
+						}
+
+						& p {
+							font-size: 10px;
+							margin-bottom: 0;
+						}
+					}
+
+					&:hover {
+						border: none;
+						box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.screen {
+		position: relative !important;
+		padding: 0 !important;
+	}
+
+	.phone {
+		height: 100% !important;
+		border-radius: 0 !important;
+	}
+}
